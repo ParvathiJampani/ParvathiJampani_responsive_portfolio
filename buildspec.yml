@@ -1,1 +1,22 @@
+version: 0.2
 
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+  pre_build:
+    commands:
+      - echo "Pre-build phase"
+  build:
+    commands:
+      - echo "Build phase"
+      # Add your build commands here
+  post_build:
+    commands:
+      - echo "Post-build phase"
+      # Add any post-build cleanup or deployment commands here
+
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: yes
