@@ -2,18 +2,28 @@ version: 0.2
 
 phases:
   install:
+  commads:
+  - echo executing "install phase"
+  finally:
+  - echo executing install finally
     runtime-versions:
       nodejs: 14
   pre_build:
     commands:
-      - echo "Pre-build phase"
+      - echo executing "Pre-build phase"
+       finally:
+  - echo executing Pre build finally
   build:
     commands:
-      - echo "Build phase"
+      - echo executing "Build phase"
+        finally:
+  - echo executing build finally
       # Add your build commands here
   post_build:
     commands:
-      - echo "Post-build phase"
+      - echo executing "Post-build phase"
+        finally:
+  - echo executing Post build finally
       # Add any post-build cleanup or deployment commands here
 
 artifacts:
