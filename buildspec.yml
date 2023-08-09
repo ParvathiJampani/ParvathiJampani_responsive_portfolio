@@ -4,6 +4,7 @@ phases:
   install:
   commads:
   - echo executing "install phase"
+  npm istall
   finally:
   - echo executing install finally
     runtime-versions:
@@ -16,17 +17,23 @@ phases:
   build:
     commands:
       - echo executing "Build phase"
-        finally:
+              finally:
   - echo executing build finally
       # Add your build commands here
+       npm run build
   post_build:
     commands:
       - echo executing "Post-build phase"
         finally:
   - echo executing Post build finally
       # Add any post-build cleanup or deployment commands here
+       - echo "Cleaning up build artifacts..."
+    - rm -rf node_modules # Remove development dependencies
+    - rm -rf src # Remove source files if not needed
+    - rm -f package.json package-lock.json # Remove package.json and package-lock.json if not needed
 
 artifacts:
   files:
     - '**/*'
   discard-paths: yes
+  base-directory: build
