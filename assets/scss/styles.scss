@@ -299,24 +299,72 @@ img{
         border-radius: .5rem;
         z-index: var(--z-back);
     }
-    &__html{
+    &__AWS{
         width: 95%;
+    }
+    &__html{
+        width: 85%;
     }
     &__css{
         width: 85%;
     }
-    &__js{
-        width: 65%;
+    &__Python{
+        width: 90%;
     }
-    &__ux{
+    &__PostgreSQL{
         width: 85%;
     }
+}
+&__Terraform{
+    width: 80%;
+}
+&__Git{
+    width: 85%;
+}
+&__Docker{
+    width: 90%;
+}
     &__img{
         border-radius: .5rem;
     }
-}
-/* ===== WORK =====*/
-.work{
+
+
+    /* ===== Certifications =====*/
+    
+.Certifications {
+    &.section {
+      // Your section styling here
+    }
+  
+    &__container {
+      display: flex;
+      // Your container styling here
+    }
+  
+    &__data {
+      a {
+        display: inline-block;
+        position: relative;
+        transition: transform 0.3s ease;
+  
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  
+  .Certification__cert {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .responsive-img {
+    // Your responsive image styling here
+  }
+
+/* ===== Experience=====*/
+.Experience{
     &__container{
         row-gap: 2rem;
     }
@@ -334,9 +382,70 @@ img{
         }
     }
 }
+.Experience {
+    &.section-title {
+      // Your section title styling here
+    }
+  
+    &__container {
+      // Your container styling here
+    }
+  
+    &__subtitle {
+      // Your subtitle styling here
+    }
+  
+    &__job {
+      // Your job container styling here
+  
+      &-title {
+        a {
+          // Your job title link styling here
+        }
+      }
+  
+      &-duration {
+        // Your job duration styling here
+      }
+  
+      &-responsibilities {
+        // Your responsibilities styling here
+  
+        ul {
+          // Your unordered list styling here
+        }
+      }
+    }
+  }
 
-/* ===== CONTACT =====*/
-.contact{
+/* ===== Education=====*/
+
+  
+  .education {
+    &.section-title {
+      // Your section title styling here
+    }
+  
+    &__container {
+      // Your container styling here
+    }
+  
+    .education-item {
+      // Styling for each education item
+  
+      h3 a {
+        // Styling for the education institution link
+      }
+  
+      p {
+        // Styling for the education details
+      }
+    }
+  }
+
+
+/* ===== CONTACT Me=====*/
+.contact Me{
     &__input{
         width: 100%;
         font-size: var(--normal-font-size);
@@ -357,6 +466,45 @@ img{
     }
 }
 
+.Contact-me {
+    &.section-title {
+      // Your section title styling here
+    }
+  
+    &__container {
+      // Your container styling here
+    }
+  
+    .Contact-me-item {
+      // Styling for each contact item
+  
+      .contact-icons-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+  
+        .contact-icon {
+          margin-bottom: 10px;
+  
+          a {
+            font-family: Arial, sans-serif;
+  
+            &.hoverline {
+              // Styling for hover effect on links
+            }
+          }
+  
+          p {
+            font-family: Arial, sans-serif;
+            // Additional styling for paragraphs, if needed
+          }
+  
+          .Contact-Me__social-icon {
+            // Styling for social media icons
+          }
+        }
+      }
+    }
 /* ===== FOOTER =====*/
 .footer{
     background-color: var(--second-color);
@@ -425,13 +573,13 @@ img{
         column-gap: 1rem;
     }
 
-    .work__container{
+    .Experience__container{
         grid-template-columns: repeat(2,1fr);
         column-gap: 2rem;
         padding-top: 2rem;
     }
 
-    .contact{
+    .contact Me{
         &__form{
             width: 360px;
             padding-top: 2rem ;
@@ -502,7 +650,7 @@ img{
         align-items: center;
         text-align: initial;
     }
-    .work__container{
+    .Experience__container{
         grid-template-columns: repeat(3,1fr);
         column-gap: 2rem;
     }
@@ -522,3 +670,4 @@ img{
         }
     }
 }
+
